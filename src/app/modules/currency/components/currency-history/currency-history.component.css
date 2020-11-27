@@ -1,0 +1,21 @@
+.currency-history {
+    max-height: 350px;
+    display: block;
+}
+
+.currency-history-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currency-history-filter .filter-item {
+    cursor: pointer;
+    padding: 0px 10px;
+}
+
+.filter-item.active {
+    background-color: white;
+    border: 1px solid #1DD195;
+    border-radius: 20px;
+}

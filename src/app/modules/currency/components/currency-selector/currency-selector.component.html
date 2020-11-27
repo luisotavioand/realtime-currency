@@ -1,0 +1,13 @@
+<div class="selector-container">
+    <div class="scroller back" (click)="onClickBack()">
+        <fa-icon [icon]="faAngleLeft" [size]="'2x'" [class]="'icon'"></fa-icon>
+    </div>
+    <div class="currency-selector" id="currency-selector">
+        <div *ngFor="let item of currencyTypes">
+            <app-currency-quote-card [currencyName]="item.name" [currencyValue]="item.ask" [currencyAbbreviation]="item.code" (emiteAtivacao)="onEmitAtivacaoCard($event)"></app-currency-quote-card>
+        </div>
+    </div>
+    <div class="scroller next" (click)="onClickNext()">
+        <fa-icon [icon]="faAngleRight" [size]="'2x'" [class]="'icon'"></fa-icon>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="card-quote" [ngClass]="{'active': activeCard}">
+    <div class="card-quote-header">
+        <div>
+            <h3>{{ currencyAbbreviation }}</h3>
+            <p>{{ currencyName }}</p>
+        </div>
+        <fa-icon [icon]="faWallet" [size]="'lg'" [class]="'icon'"></fa-icon>
+    </div>
+    <div class="card-quote-body">
+        <p>{{ currencyValue | currency:'BRL':true }}</p>
+    </div>
+</div>

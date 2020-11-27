@@ -1,1 +1,14 @@
-<p>navbar works!</p>
+<nav [class]="navbarStyle">
+    <div class="logo">
+        <img src="./../../../assets/img/logo.png" alt="Realtime Currency" [hidden]="navbarStyle === 'nav-primary'">
+        <img src="./../../../assets/img/logo-white.png" alt="Realtime Currency" [hidden]="navbarStyle === 'nav-light'">
+        <p>Realtime Currency</p>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
+            <li><a [routerLink]="['/currency/realtime']" routerLinkActive="active">Real Time Quote</a></li>
+            <li><a [routerLink]="['/currency/history']" routerLinkActive="active">Currency History</a></li>
+        </ul>
+    </div>
+</nav>

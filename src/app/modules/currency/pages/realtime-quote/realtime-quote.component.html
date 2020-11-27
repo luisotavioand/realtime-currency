@@ -1,0 +1,13 @@
+<main class="container">
+    <app-currency-selector (emitCurrency)="onEmitCurrencySelection($event)"></app-currency-selector>
+    <section id="stats" class="d-flex">
+        <div class="flex-3">
+            <app-currency-history [currencyCode]="currencySelected"></app-currency-history>
+        </div>
+        <div class="flex-1">
+            <div class="quote-card">
+                <h2>+0.56</h2>
+            </div>
+        </div>
+    </section>
+</main>

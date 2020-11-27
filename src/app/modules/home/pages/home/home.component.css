@@ -1,0 +1,37 @@
+.home {
+    padding: 60px;
+    height: calc(100vh - 65px);
+    background: rgb(36, 161, 119);
+    background: linear-gradient(342deg, rgba(36, 161, 119, 1) 0%, rgba(0, 204, 136, 1) 56%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: inherit;
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 15px 10px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    border: 1px solid black;
+}
+
+.btn-light {
+    background-color: white;
+    color: #00CC88;
+    border: 1px solid white;
+    border-radius: 30px;
+    min-width: 200px;
+}

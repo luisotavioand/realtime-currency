@@ -1,0 +1,12 @@
+<div class="currency-history">
+    <ngx-spinner [fullScreen]="false"></ngx-spinner>
+    <div class="currency-history-filter">
+        <div class="filter-item" (click)="onClickFilterChart(5)" [ngClass]="{'active': numberOfDays === 5}">5</div>
+        <div class="filter-item" (click)="onClickFilterChart(10)" [ngClass]="{'active': numberOfDays === 10}">10</div>
+        <div class="filter-item" (click)="onClickFilterChart(20)" [ngClass]="{'active': numberOfDays === 20}">20</div>
+        <div class="filter-item" (click)="onClickFilterChart(50)" [ngClass]="{'active': numberOfDays === 50}">50</div>
+        <div class="filter-item" (click)="onClickFilterChart(100)" [ngClass]="{'active': numberOfDays === 100}">100</div>
+    </div>
+    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
+    </canvas>
+</div>
