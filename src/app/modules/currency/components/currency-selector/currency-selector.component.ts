@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faWallet } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 import { RealtimeCurrencyService } from 'src/app/core/services/realtime-currency.service';
 import { CurrencyData } from 'src/app/core/models/CurrencyData.model';
@@ -16,11 +16,13 @@ export class CurrencySelectorComponent implements OnInit {
 
   faAngleLeft = faAngleLeft;
   faAngleRight = faAngleRight;
+  faWallet = faWallet;
 
   currencyTypes: Array<any> = [];
   currencyData: CurrencyData;
 
   subscription: Subscription;
+  activeCurrencyCode: string;
 
   constructor(private realtimeCurrencyService: RealtimeCurrencyService) { }
 
@@ -29,7 +31,6 @@ export class CurrencySelectorComponent implements OnInit {
     this.subscription = this.realtimeCurrencyService.getAllQuotes().subscribe(
       (resp) => {
         this.currencyData = resp;
-        console.log(this.currencyData);
         this.definirCurrencyTypes();
       }
     );
@@ -57,8 +58,9 @@ export class CurrencySelectorComponent implements OnInit {
     selector.scrollBy(100, 0);
   }
 
-  async onEmitAtivacaoCard(event) {
-    this.emitCurrency.emit(event);
+  async onEmitAtivacaoCard(item) {
+    this.activeCurrencyCode = item.code;
+    this.emitCurrency.emit(item.code);
   }
 
 }

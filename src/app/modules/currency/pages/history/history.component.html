@@ -1,3 +1,17 @@
 <main class="container">
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" (click)="openTab($event, 'comparasion')">Currencies Comparative</button>
+        <button class="tablinks" (click)="openTab($event, 'history')">Currency History</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="comparasion" class="tabcontent">
+        <app-currency-comparative></app-currency-comparative>
+    </div>
+
+    <div id="history" class="tabcontent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fuga, magni cumque veritatis nisi quasi vero qui laboriosam. Totam, temporibus.</p>
+    </div>
 
 </main>

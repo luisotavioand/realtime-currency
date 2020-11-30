@@ -1,15 +1,15 @@
 import { RealtimeCurrencyService } from 'src/app/core/services/realtime-currency.service';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { ChartDataSets, ChartOptions } from 'chart.js';
+import { ChartDataSets } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
-  selector: 'app-currency-history',
-  templateUrl: './currency-history.component.html',
-  styleUrls: ['./currency-history.component.css']
+  selector: 'app-currency-daily-stats',
+  templateUrl: './currency-daily-stats.component.html',
+  styleUrls: ['./currency-daily-stats.component.css']
 })
-export class CurrencyHistoryComponent implements OnInit, OnChanges {
+export class CurrencyDailyStatsComponent implements OnInit, OnChanges {
 
   public lineChartData: ChartDataSets[] = [
     { data: [], label: 'Currency' },
@@ -38,7 +38,9 @@ export class CurrencyHistoryComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.currencyCode) {
-      this.getCurrencyData();
+      if (this.currencyCode) {
+        this.getCurrencyData();
+      }
     }
   }
 

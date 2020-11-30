@@ -1,0 +1,26 @@
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    width: 33%;
+    padding: 5px;
+}
+
+.form-control input[type='text'],
+input[type="number"],
+input[type="datetime-local"],
+select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-family: 'Roboto', 'Verdana', 'Arial';
+    font-size: 1rem;
+}

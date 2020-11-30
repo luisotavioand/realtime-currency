@@ -2,7 +2,7 @@
     <app-currency-selector (emitCurrency)="onEmitCurrencySelection($event)"></app-currency-selector>
     <section id="stats" class="d-flex">
         <div class="flex-3">
-            <app-currency-history [currencyCode]="currencySelected"></app-currency-history>
+            <app-currency-daily-stats [currencyCode]="currencySelected"></app-currency-daily-stats>
         </div>
         <div class="flex-1">
             <div class="quote-card">
